@@ -1,12 +1,251 @@
-#menuNav {
 
+/* START NAVIGATION BAR */
+#navigation {
 	position:fixed;
-	top:0;
-	left:0;
-	height: 40px;
+	height: 2em;
 	z-index: 70;
 	width: 100%;
 	padding: 0;
 	margin:0;
-
 }
+
+#myMenu {
+	display: flex;
+	flex-direction: row;
+	width: 30%;
+	height: 2em;
+	margin-top: 2em;
+	margin-left: 2.5em;
+	min-width: 22em;
+}
+
+.menuItem {
+	flex-grow: 1;
+	font-family: "freight-sans-pro";
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .17em;
+	font-size: 1em;
+}
+
+.menuItemNone {
+	display: none;
+}
+
+.menuItem a {
+	color: rgba(0, 0, 0, 0.3);
+	text-decoration: none
+}
+
+.active a {
+	color: rgba(0, 0, 0, 0.7);
+}
+/* END NAVIGATION BAR */
+
+/* START WELCOME PAGE */
+.welcomeMain {
+	position: relative;
+	bottom: 20%;
+	transform: translateY(20%);
+	text-align: center;
+}
+
+.subHeader {
+	font-family: "freight-text-pro";
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.3);
+	letter-spacing: .03em;
+	font-size: .9em;
+	margin-bottom: 0;
+	margin-top: .3em;
+}
+
+.italic {
+	font-style: italic;
+	font-size: 1.1em;
+}
+
+.header {
+	text-transform: uppercase;
+	letter-spacing: .18em;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 600;
+	font-family: "freight-sans-pro";
+	font-size: 1.5em;
+	margin-top: .7em;
+	margin-bottom: 0;
+}
+
+.subHeaderGold {
+	font-family: "freight-text-pro";
+	font-weight: 100;
+	color: #b7a080;
+	letter-spacing: .08em;
+	font-size: .9em;
+	margin-bottom: 0;
+	margin-top: .3em;
+}
+
+.ampersand {
+	font-style: italic;
+	font-family: "freight-big-pro";
+}
+
+.centerSpacer {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.subHeaderGold p {
+	display: inline;
+}
+
+.circle {
+	width: 3px;
+	height: 3px;
+	background: #b7a080;
+	border-radius: 50%;
+	display: inline-block;
+	margin-bottom: .2em;
+	margin-left: .4em;
+	margin-right: .4em;
+}
+/* END WELCOME PAGE */
+
+/* START WORKS PAGE */
+.worksSidebar {
+	width: 20em;
+	height: 100%;
+	margin-top: 12em;
+}
+
+.categoryHeader {
+	font-family: "freight-text-pro";
+	color: #b7a080;
+	font-size: 1.15em;
+	margin-bottom: .4em;
+	letter-spacing: .03em;
+	margin-left: 2em;
+}
+
+.projectTitle a {
+	margin-left: 3.6em;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.3);
+	line-height: 1.5em;
+}
+
+.projectTitle a:hover {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.workDescription {
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 600;
+	margin-left: .5em;
+}
+
+.checkbox {
+	width: 1em;
+	height: 1em;
+	/*background-color: blue;*/
+	display: inline-block;
+	text-align: center;
+	margin-left: 2em;
+	margin-right: .3em;
+	color: #a8a8a8;
+	font-family: "lato";
+	border-bottom: 1px #a8a8a8 solid;
+}
+
+.projectTitle {
+	display: inline;
+	line-height: 1.6em
+}
+
+.checked {
+	font-size: .8em;
+	margin: 0;
+}
+
+.tags {
+	margin-top: 4em;
+}
+/* END WORKS PAGE */
+
+/* START QUI PAGE */
+.quiContainer {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	margin-top: 12em;
+}
+
+.quiSidebar {
+	/*background-color: red;*/
+	height: 100%;
+	flex: 1;
+	max-width: 20em;
+	min-width:17em;
+}
+
+.content {
+	/*background-color: blue;*/
+	height: 100%;
+	flex: 3;
+	text-align: center;
+	min-width: 22em;
+}
+
+.contentText {
+	margin-top: 9em;
+}
+
+.education {
+	margin-top: 0;
+}
+
+.universities {
+	margin-left: 3.5em;
+}
+
+.personalityBox {
+	margin-top: 4em;
+}
+
+.skillsetBox {
+	margin-top: 4em;
+}
+
+.resume {
+	margin-left: 2.5em;
+}
+
+.links {
+	text-transform: uppercase;
+	letter-spacing: .18em;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 600;
+	font-family: "freight-sans-pro";
+	font-size: 1.5em;
+	margin-top: .4em;
+	margin-bottom: 0;
+}
+
+.elsewhere {
+	font-style: italic;
+}
+
+.quiSidebarRight {
+	/*background-color: yellow;*/
+	height: 100%;
+	flex: 1;
+	max-width: 20em;
+	min-width:17em;
+}
+
+.subHeader a {
+	color: rgba(0, 0, 0, 0.3);;
+}
+/* END QUI PAGE */
