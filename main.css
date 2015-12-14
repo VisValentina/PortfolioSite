@@ -196,10 +196,13 @@
 	flex: 3;
 	text-align: center;
 	min-width: 22em;
+	display: flex;
+	flex-direction: column;
 }
 
 .contentText {
 	margin-top: 9em;
+	flex: 2;
 }
 
 .education {
@@ -222,7 +225,7 @@
 	margin-left: 2.5em;
 }
 
-.links {
+.links a{
 	text-transform: uppercase;
 	letter-spacing: .18em;
 	color: rgba(0, 0, 0, 0.7);
@@ -231,6 +234,7 @@
 	font-size: 1.5em;
 	margin-top: .4em;
 	margin-bottom: 0;
+	text-decoration: none;
 }
 
 .elsewhere {
@@ -248,4 +252,15 @@
 .subHeader a {
 	color: rgba(0, 0, 0, 0.3);;
 }
+
+.contactText {
+	/*background-color: green;*/
+	flex: 1;
+	align-items: flex-end;
+}
+
+.contact {
+	margin-top: 3.5em;
+}
+
 /* END QUI PAGE */
