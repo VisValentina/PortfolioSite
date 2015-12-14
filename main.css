@@ -110,6 +110,15 @@
 	margin-left: .4em;
 	margin-right: .4em;
 }
+
+.rightArrow {
+	height: 3em;
+	width: 1.5em;
+	content: url(public/rightArrow2.png);
+	position: absolute;
+	top: 46%;
+	right: 0;
+}
 /* END WELCOME PAGE */
 
 /* START WORKS PAGE */
