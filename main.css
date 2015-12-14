@@ -146,6 +146,26 @@
 	margin-left: .5em;
 }
 
+#FWDesc {
+	display: none;
+}
+
+#MMDesc {
+	display: none;
+}
+
+#ZDesc {
+	display: none;
+}
+
+#FSDesc {
+	display: none;
+}
+
+#RDesc {
+	display: none;
+}
+
 .checkbox {
 	width: 1em;
 	height: 1em;
