@@ -1,0 +1,40 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.projectContent {
+	flex: 1;
+	background-color: red;
+	text-align: center;
+}
+
+.projectSidebar {
+	width: 12em;
+	background-color: green;
+	z-index: 5;
+	position: absolute;
+	left: -12em;
+	height: 100%;
+	/*display: none;*/
+}
+
+.menuToggle {
+	height: 2em;
+	width: 2em;
+	background-color: yellow;
+	z-index: 7;
+	position: absolute;
+	top: 90px;
+	left: 0;
+}
+
+#hiddenSidebar {
+	z-index: 6;
+	width: 12em;
+	background-color: transparent;
+	position: absolute;
+	left: 0;
+	height: 100%;
+}

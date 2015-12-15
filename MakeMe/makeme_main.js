@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
 	$('#fullpage').fullpage({
-		anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-		sectionsColor: ['#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
+		anchors:['projectIntro', 'firstImage', 'secondImage', 'thirdImage','finalImage'],
+		sectionsColor: ['#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
 		menu: '#myMenu',
 		showActiveTooltip: true,
 	});
+
 
 	$('#FWName').mouseover(function(){
 		$('#FWDesc').css('display', 'inline');
@@ -99,6 +100,13 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#hiddenSidebar').mouseover(function(){
+		$('.projectSidebar').animate({'left':'0'}, 300)
+	});
+
+	$('#hiddenSidebar').mouseout(function(){
+		$('.projectSidebar').animate({'left':'-12em'}, 300)
+	});
 
 });
 
