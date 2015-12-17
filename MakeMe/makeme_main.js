@@ -102,8 +102,8 @@ $(document).ready(function() {
 
 	$('.menuToggle').click(function() {
 		var projectSidebar = $('.projectSidebar');
-
-		if(projectSidebar.css('left') === '-192px') {
+		console.log(projectSidebar.css('left').indexOf('-') === 0);
+		if(projectSidebar.css('left').indexOf('-') === 0) {
 			projectSidebar.animate({'left':'0'}, 300)
 		} else {
 			projectSidebar.animate({'left':'-12em'}, 300)
