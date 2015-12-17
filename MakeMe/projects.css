@@ -1,62 +1,3 @@
-/*.container {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
-.main {
-	flex: 1;
-	flex-direction: row;
-	height: 100%;
-}
-
-.footer {
-	background-color: 'black'
-}
-#hiddenSidebar {
-	z-index: 6;
-	width: 12em;
-	background-color: blue;
-	position: absolute;
-	left: 0;
-	height: 100%;
-}
-
-.projectContent {
-	flex: 1;
-	background-color: red;
-	text-align: center;
-}
-
-#hiddenRightSidebar {
-	z-index: 6;
-	width: 12em;
-	background-color: yellow;
-	position: absolute;
-	right: 0;
-	height: 100%;
-}
-
-.projectSidebar {
-	width: 12em;
-	background-color: green;
-	z-index: 5;
-	position: absolute;
-	left: -12em;
-	height: 100%;
-	display: none;
-}
-
-.menuToggle {
-	height: 2em;
-	width: 2em;
-	background-color: yellow;
-	z-index: 7;
-	position: absolute;
-	top: 90px;
-	left: 0;
-}*/
-
 .HolyGrail {
   display: flex;
   min-height: 100vh;
@@ -70,13 +11,13 @@
 
 .projectContent {
   flex: 1;
-  background-color: red;
   min-width: 26em;
 }
 
 .leftSidebar, .rightSidebar {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
+   background-color: red;
 }
 
 .leftSidebar {
@@ -86,7 +27,7 @@
 
 .footer {
 	height: 2em;
-	background-color: blue
+	background-color: blue;
 }
 
 .menuToggle {
@@ -116,4 +57,83 @@
 
 #MMName a {
 	color: rgba(0, 0, 0, 0.7);
+}
+
+/* INTRO PAGE STYLING */
+.projectContent {
+	margin-left: 10%;
+	margin-right: 10%;
+	min-height: 30em;
+}
+
+.projectContentHeader {
+	font-family: "freight-text-pro";
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 1.2em;
+	letter-spacing: .04em;
+	margin-bottom: .4em;
+	margin-top: 31%;
+}
+
+.projectContentDescription {
+	font-family: "freight-text-pro";
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.6);
+	letter-spacing: .02em;
+	margin-top: 0;
+}
+
+.bulletPoints {
+	margin-top: 1.5em;
+}
+
+.bulletPointsBold {
+	color: #b7a080;
+	font-family: "freight-sans-pro";
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline;
+	font-size: .8em;
+	letter-spacing: .1em
+}
+
+.bulletPointsText {
+	color: #b7a080;
+	font-family: "freight-text-pro";
+	display: inline;
+	font-weight: 100;
+	letter-spacing: .08em;
+	font-size: .88em;
+}
+
+.downArrow {
+	height: 1.5em;
+	width: 3em;
+	content: url(public/downArrow_test.png);
+	position: relative;	
+	left: 0;
+	top: 0;
+	/*z-index: 10000*/
+}
+
+img {
+	/*height: 100%;
+	width: 100%;
+	background-size: cover; */
+	/*width: auto;
+    height: auto;*/
+    /*object-fit: cover;
+    overflow: hidden;*/
+    background-size: contain
+    overflow: hidden;
+}
+
+.projectContentImg {
+	margin-left: 0;
+	margin-right: 0;
+	min-height: 30em;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
 }
