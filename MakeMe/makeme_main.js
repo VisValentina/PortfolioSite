@@ -100,13 +100,13 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.menuToggle').click(function(){
-		// console.log("I click");
-		if($('.projectSidebar').css('left') === '-12em') {
-			$('.projectSidebar').animate({'left':'0'}, 300)
-		}
-		else {
-			$('.projectSidebar').animate({'left':'-12em'}, 300)
+	$('.menuToggle').click(function() {
+		var projectSidebar = $('.projectSidebar');
+		
+		if(projectSidebar.css('left').indexOf('-') === 0) {
+			projectSidebar.animate({'left':'0'}, 300)
+		} else {
+			projectSidebar.animate({'left':'-12em'}, 300)
 		}
 	});
 });

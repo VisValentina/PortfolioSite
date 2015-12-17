@@ -93,7 +93,7 @@
 	height: 1.3em;
 	width: 1.3em;
 	background-color: yellow;
-	z-index: 7;
+	z-index: 11;
 	position: absolute;
 	top: 4.2em;
 	left: 1em;
@@ -106,5 +106,6 @@
 	position: absolute;
 	left: -12em;
 	height: 100%;
+  top: 0;
 	/*display: none;*/
 }
