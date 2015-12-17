@@ -13,7 +13,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 30%;
-	height: 2em;
+	height: 1.85em;
 	margin-top: 2em;
 	margin-left: 2.5em;
 	min-width: 22em;
@@ -39,6 +39,15 @@
 
 .active a {
 	color: rgba(0, 0, 0, 0.7);
+}
+
+#hoverNavLine {
+	margin-top: 0;
+	margin-bottom: 0;
+	float: left;
+	width: 7em;
+	height: .06em;
+	background-color: #b7a080;
 }
 /* END NAVIGATION BAR */
 
@@ -122,10 +131,20 @@
 /* END WELCOME PAGE */
 
 /* START WORKS PAGE */
+.expandingMenu {
+	height: .8em;
+	width: 1em;
+	content: url(public/menu_icon.png);
+	position: absolute;
+	top: 5em;
+	left: 1em;
+	display: none;
+}
+
 .worksSidebar {
 	width: 20em;
 	height: 100%;
-	margin-top: 12em;
+	margin-top: 14em;
 }
 
 .categoryHeader {

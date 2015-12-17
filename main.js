@@ -81,25 +81,27 @@ $(document).ready(function() {
 
 	// Click on tag will filter the project titles pertaining to it
 	// GLOBALS
-	var labelDeselected = 'rgba(0, 0, 0, 0.298039)',
-		labelSelected = '#000000',
-		emptyCheckbox = '#f0f0f0',
+	var emptyCheckbox = 'rgb(240, 240, 240)',
 		fullCheckbox = '#a8a8a8';
 
 	$('#brandingClick').click(function(){
 		var label = $('#brandingClick'),
 			checkbox = $('#brandingSelected');
 
-		if(label.css('color') === labelDeselected) {
-			label.css('color', labelSelected);
+		if(checkbox.css('color') === emptyCheckbox) {
 			checkbox.css('color', fullCheckbox);
+			$('#FWName').hide();
 		} else {
-			label.css('color', labelDeselected);
 			checkbox.css('color', emptyCheckbox);
+			$('#FWName').show();
 		}
 	});
 
 
+	// Navbar gold line
+	// $('.worksPage').hasClass('active') {
+	// 	$('#hoverNavLine').css('width', '7em');
+	// };
 });
 
  //-- End

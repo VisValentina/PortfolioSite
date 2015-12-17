@@ -1,6 +1,24 @@
-.container {
+/*.container {
 	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.main {
+	flex: 1;
 	flex-direction: row;
+	height: 100%;
+}
+
+.footer {
+	background-color: 'black'
+}
+#hiddenSidebar {
+	z-index: 6;
+	width: 12em;
+	background-color: blue;
+	position: absolute;
+	left: 0;
 	height: 100%;
 }
 
@@ -10,6 +28,15 @@
 	text-align: center;
 }
 
+#hiddenRightSidebar {
+	z-index: 6;
+	width: 12em;
+	background-color: yellow;
+	position: absolute;
+	right: 0;
+	height: 100%;
+}
+
 .projectSidebar {
 	width: 12em;
 	background-color: green;
@@ -17,7 +44,7 @@
 	position: absolute;
 	left: -12em;
 	height: 100%;
-	/*display: none;*/
+	display: none;
 }
 
 .menuToggle {
@@ -28,13 +55,56 @@
 	position: absolute;
 	top: 90px;
 	left: 0;
+}*/
+
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-#hiddenSidebar {
-	z-index: 6;
-	width: 12em;
-	background-color: transparent;
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.projectContent {
+  flex: 1;
+  background-color: red;
+  min-width: 26em;
+}
+
+.leftSidebar, .rightSidebar {
+  /* 12em is the width of the columns */
+  flex: 0 0 12em;
+}
+
+.leftSidebar {
+  /* put the nav on the left */
+  order: -1;
+}
+
+.footer {
+	height: 2em;
+	background-color: blue
+}
+
+.menuToggle {
+	height: 1.3em;
+	width: 1.3em;
+	background-color: yellow;
+	z-index: 7;
 	position: absolute;
-	left: 0;
+	top: 4.2em;
+	left: 1em;
+}
+
+.projectSidebar {
+	width: 12em;
+	background-color: green;
+	z-index: 10;
+	position: absolute;
+	left: -12em;
 	height: 100%;
+	/*display: none;*/
 }
