@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 	$('.menuToggle').click(function() {
 		var projectSidebar = $('.projectSidebar');
-		console.log(projectSidebar.css('left').indexOf('-') === 0);
+		
 		if(projectSidebar.css('left').indexOf('-') === 0) {
 			projectSidebar.animate({'left':'0'}, 300)
 		} else {
