@@ -5,6 +5,7 @@ $(document).ready(function() {
 		sectionsColor: ['#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
 		menu: '#myMenu',
 		showActiveTooltip: true,
+		slidesNavigation: true,
 
 		onLeave: function(index, nextIndex, direction) {
 			var leavingSection = $(this);
