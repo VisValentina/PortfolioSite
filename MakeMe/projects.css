@@ -1,12 +1,15 @@
 .HolyGrail {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
+  flex: 1;
 }
 
 .HolyGrail-body {
   display: flex;
   flex: 1;
+  justify-content: center;
+  min-width: 57em;
 }
 
 .projectContent {
@@ -17,7 +20,7 @@
 .leftSidebar, .rightSidebar {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
-  background-color: red;
+  background-color: transparent;
 }
 
 .leftSidebar {
@@ -42,7 +45,7 @@
 
 .projectSidebar {
 	width: 12em;
-	background-color: green;
+	background-color: transparent;
 	z-index: 10;
 	position: absolute;
 	top: 0;

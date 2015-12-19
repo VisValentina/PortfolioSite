@@ -1,10 +1,73 @@
 $(document).ready(function() {
-
+	var currentIndex = "";
 	$('#fullpage').fullpage({
 		anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
 		sectionsColor: ['#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
 		menu: '#myMenu',
 		showActiveTooltip: true,
+
+		onLeave: function(index, nextIndex, direction) {
+			var leavingSection = $(this);
+
+			switch(nextIndex) {
+			case 2:
+				$("#hoverNavLine").animate({"width":"7em"}, 140);
+				currentIndex = nextIndex;
+				break;
+			case 3:
+				$("#hoverNavLine").animate({"width":"10em"}, 140);
+				currentIndex = nextIndex;
+				break;
+			case 4:
+				$("#hoverNavLine").animate({"width":"15em"}, 140);
+				currentIndex = nextIndex;
+				break;
+			default:
+				currentIndex = nextIndex;
+				$("#hoverNavLine").animate({"width":"0em"}, 140);
+			}
+		}
+	});
+	
+	function getLength(pageIndex) {
+		switch(pageIndex) {
+		case 2:
+			return "7em";
+		case 3:
+			return "10em";	
+		case 4:
+			return "15em";	
+		default:
+			return "0em";
+		}
+	};
+
+	$('#WorksNav').mouseover(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLine").animate({"width":"7em"}, 140);
+	});
+	$('#WorksNav').mouseout(function() {
+		var currentIndexLength = getLength(currentIndex);
+		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
+	});	
+
+	$('#PlaygroundNav').mouseover(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLine").animate({"width":"10em"}, 140);
+	});
+
+	$('#PlaygroundNav').mouseout(function() {
+		var currentIndexLength = getLength(currentIndex);
+		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
+	});
+	$('#QuiNav').mouseover(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLine").animate({"width":"15em"}, 140);
+	});
+
+	$('#QuiNav').mouseout(function() {
+		var currentIndexLength = getLength(currentIndex);
+		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
 	});
 
 	$('#FWName').mouseover(function(){
@@ -98,10 +161,6 @@ $(document).ready(function() {
 	});
 
 
-	// Navbar gold line
-	// $('.worksPage').hasClass('active') {
-	// 	$('#hoverNavLine').css('width', '7em');
-	// };
 });
 
  //-- End
