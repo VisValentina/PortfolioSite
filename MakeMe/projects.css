@@ -159,12 +159,6 @@ img {
 }
 
 /* MENU ICON ANIMATION */
-button {
-position: absolute;
-top: 5em;
-left: 1em;
-}
-
 .barContainer {
 position: relative;
 top: -44px;
@@ -267,3 +261,5 @@ top: -44px;
   transition-delay: 0s, 0.2s;
 }
 /* END MENU ICON NAVIGATION */
+
+
