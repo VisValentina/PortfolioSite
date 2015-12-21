@@ -62,6 +62,18 @@
 	color: rgba(0, 0, 0, 0.7);
 }
 
+#worksProjectNav a {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+#hoverNavLineWorks {
+	margin-top: 0;
+	margin-bottom: 0;
+	float: left;
+	width: 7em;
+	height: .06em;
+	background-color: #b7a080;
+}
 /* INTRO PAGE STYLING */
 .projectContent {
 	margin-left: 10%;

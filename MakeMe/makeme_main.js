@@ -109,6 +109,17 @@ $(document).ready(function() {
 			projectSidebar.animate({'left':'-12em'}, 300)
 		}
 	});
+
+	//Hover Nav Line
+	$('#playgroundNavWorks').mouseover(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLineWorks").animate({"width":"17em"}, 140);
+	});
+
+	$('#playgroundNavWorks').mouseout(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLineWorks").animate({"width":"7em"}, 140);
+	});
 });
 
  //-- End

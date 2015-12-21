@@ -414,7 +414,15 @@ img {
 
 .leftText {
 	position: absolute;
-	left:0px;
-	bottom: 0px;
+	margin-left:12em;
+	bottom: 7%;
 }
+
+.rightText {
+	position: absolute;
+	right: 0;
+	margin-right:12em;
+	bottom: 7%;
+}
+
 /* END PLAYGROUND PAGE */
