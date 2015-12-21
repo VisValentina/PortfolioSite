@@ -370,6 +370,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .Aligner-itemPlayground {
@@ -412,17 +413,21 @@ img {
 	display: inline;
 }*/
 
-.leftText {
-	position: absolute;
-	margin-left:12em;
-	bottom: 7%;
+.playgroundTextDesc {
+	margin-top: .4em;
+	width: 100%;
+	flex-direction: row;
 }
 
-.rightText {
-	position: absolute;
-	right: 0;
-	margin-right:12em;
-	bottom: 7%;
+.leftPlaygroundTextDesc{
+	order: 1;
+	flex: 1;
+	display: inline;
 }
-
+.rightPlaygroundTextDesc{
+	order: 2;
+	flex: 1;
+	display: inline;
+	float: right;
+}
 /* END PLAYGROUND PAGE */
