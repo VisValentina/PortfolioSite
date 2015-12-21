@@ -16,11 +16,11 @@ $(document).ready(function() {
 				currentIndex = nextIndex;
 				break;
 			case 3:
-				$("#hoverNavLine").animate({"width":"10em"}, 140);
+				$("#hoverNavLine").animate({"width":"17em"}, 140);
 				currentIndex = nextIndex;
 				break;
 			case 4:
-				$("#hoverNavLine").animate({"width":"15em"}, 140);
+				$("#hoverNavLine").animate({"width":"22em"}, 140);
 				currentIndex = nextIndex;
 				break;
 			default:
@@ -35,9 +35,9 @@ $(document).ready(function() {
 		case 2:
 			return "7em";
 		case 3:
-			return "10em";	
+			return "17em";	
 		case 4:
-			return "15em";	
+			return "22em";	
 		default:
 			return "0em";
 		}
@@ -47,27 +47,30 @@ $(document).ready(function() {
 		e.stopPropagation();
 		$("#hoverNavLine").animate({"width":"7em"}, 140);
 	});
-	$('#WorksNav').mouseout(function() {
+	$('#WorksNav').mouseout(function(e) {
 		var currentIndexLength = getLength(currentIndex);
+		e.stopPropagation();
 		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
 	});	
 
 	$('#PlaygroundNav').mouseover(function(e) {
 		e.stopPropagation();
-		$("#hoverNavLine").animate({"width":"10em"}, 140);
+		$("#hoverNavLine").animate({"width":"17em"}, 140);
 	});
 
-	$('#PlaygroundNav').mouseout(function() {
+	$('#PlaygroundNav').mouseout(function(e) {
 		var currentIndexLength = getLength(currentIndex);
+		e.stopPropagation();
 		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
 	});
 	$('#QuiNav').mouseover(function(e) {
 		e.stopPropagation();
-		$("#hoverNavLine").animate({"width":"15em"}, 140);
+		$("#hoverNavLine").animate({"width":"22em"}, 140);
 	});
 
-	$('#QuiNav').mouseout(function() {
+	$('#QuiNav').mouseout(function(e) {
 		var currentIndexLength = getLength(currentIndex);
+		e.stopPropagation();
 		$("#hoverNavLine").animate({"width":currentIndexLength}, 140);
 	});
 
