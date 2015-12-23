@@ -161,6 +161,7 @@
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.3);
 	line-height: 1.5em;
+	display: inline;
 }
 
 .projectTitle a:hover {

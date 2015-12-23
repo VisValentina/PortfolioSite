@@ -157,14 +157,14 @@ $(document).ready(function() {
 
 		if(checkbox.css('color') === emptyCheckbox) {
 			checkbox.css('color', fullCheckbox);
-			$('#FWName').hide();
+			$('.FogWindow').remove();
 		} else {
 			checkbox.css('color', emptyCheckbox);
-			$('#FWName').show();
+			$('#preFogWindow').append( "<div class='FogWindow'><span id='FWName' class='subHeader projectTitle'><a href='#''>FogWindow</a></span><span id='FWDesc' class='subHeader projectTitle workDescription'>Fog up your screen</span><br></div>");
 		}
 	});
-
 
 });
 
  //-- End
+
