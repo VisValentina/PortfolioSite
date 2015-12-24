@@ -27,7 +27,21 @@ $(document).ready(function() {
 				currentIndex = nextIndex;
 				$("#hoverNavLine").animate({"width":"0em"}, 140);
 			}
+		},
+
+		//SLIDER
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+			// console.log("anchorLink", anchorLink);
+			// console.log("index", index);
+			// console.log("slideIndex", slideIndex);
+			// console.log("direction", direction);
+			// console.log("nextSlideIndex", nextSlideIndex);
+			// console.log(nextSlideIndex * 72.5);
+			$('.range-handle').css('left', (nextSlideIndex * 72.5) + "px");
+			$('.range-quantity').css('width', (nextSlideIndex * 72.5) + "px");
+
 		}
+		//SLIDER
 	});
 	
 	function getLength(pageIndex) {
@@ -163,6 +177,45 @@ $(document).ready(function() {
 			$('#preFogWindow').append( "<div class='FogWindow'><span id='FWName' class='subHeader projectTitle'><a href='#''>FogWindow</a></span><span id='FWDesc' class='subHeader projectTitle workDescription'>Fog up your screen</span><br></div>");
 		}
 	});
+
+
+// SLIDER
+var elem = document.querySelector('.js-range');
+var init = new Powerange(elem, {min: 1, max: 5, start: 1, step: 1});
+elem.onchange = onSliderChange;
+
+function onSliderChange() {
+	switch(elem.value) {
+		case "1":
+			window.location.hash = '#thirdPage'
+		break;
+		case "2":
+			window.location.hash = '#thirdPage/slide2'
+		break;
+		case "3":
+			window.location.hash = '#thirdPage/slide3'
+		break;
+		case "4":
+			window.location.hash = '#thirdPage/slide4'
+		break;
+		case "5":
+			window.location.hash = '#thirdPage/slide5'
+		break;
+		default:
+			window.location.hash = '#thirdPage'
+	}
+};
+// SLIDER
+
+// $("#armand").click(function() {
+// 	console.log("armand clicked");
+// 	// console.log(elem.value);
+// 	elem.value = 5;
+// 	console.log(elem.value);
+// 	$('.range-handle').css('left', '300px');
+// 	$('.range-quantity').css('width', '300px');
+
+// })
 
 });
 
