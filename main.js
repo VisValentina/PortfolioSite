@@ -6,18 +6,26 @@ $(document).ready(function() {
 		menu: '#myMenu',
 		showActiveTooltip: true,
 		slidesNavigation: true,
+		fixedElements: '#camel_fixed',
 
 		onLeave: function(index, nextIndex, direction) {
 			var leavingSection = $(this);
-
+			// console.log("index", index);
+			// console.log("nextIndex", nextIndex);
 			switch(nextIndex) {
+			case 1:
+				console.log("back to first page");
+				$("#camel_fixed").fadeIn(4000);
+				break;
 			case 2:
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
 				currentIndex = nextIndex;
+				$('#camel_fixed').fadeOut(6000);
 				break;
 			case 3:
 				$("#hoverNavLine").animate({"width":"17em"}, 140);
 				currentIndex = nextIndex;
+				$('#camel_fixed').hide();
 				break;
 			case 4:
 				$("#hoverNavLine").animate({"width":"22em"}, 140);
@@ -205,18 +213,11 @@ function onSliderChange() {
 			window.location.hash = '#thirdPage'
 	}
 };
-// SLIDER
-
-// $("#armand").click(function() {
-// 	console.log("armand clicked");
-// 	// console.log(elem.value);
-// 	elem.value = 5;
-// 	console.log(elem.value);
-// 	$('.range-handle').css('left', '300px');
-// 	$('.range-quantity').css('width', '300px');
-
-// })
-
+// SVG
+setInterval(function() { 
+	$("#camel_drawing").fadeIn(15000);
+}, 2000);
+// SVG
 });
 
  //-- End
