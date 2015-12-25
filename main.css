@@ -450,11 +450,10 @@ img {
 /* SLIDER */
 .sliderToggle {
  width: 15em;
- position: absolute;
- bottom: 20px;
- left: 50%;
- z-index: 4;
- display: none;
+ position: relative;
+ bottom: 2em;
+ z-index: 3;
+ margin: auto;
 }
 
 .range-handle {
@@ -478,6 +477,15 @@ img {
 
 .range-bar {
 	height: 2.2px;
+}
+
+.colorHider {
+	background-color: #F0F0F0;
+	width: 100%;
+	 position: absolute;
+	 bottom: 1.3em;
+	 z-index: 4;
+	 height: 23px;
 }
 /* END SLIDER */
 

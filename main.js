@@ -6,7 +6,8 @@ $(document).ready(function() {
 		menu: '#myMenu',
 		showActiveTooltip: true,
 		// slidesNavigation: true,
-		fixedElements: '#camel_fixed, .sliderToggle',
+		fixedElements: '#camel_fixed, .colorHider, .sliderToggle',
+
 
 		onLeave: function(index, nextIndex, direction) {
 			var leavingSection = $(this);
@@ -16,24 +17,34 @@ $(document).ready(function() {
 			case 1:
 				console.log("back to first page");
 				$("#camel_fixed").fadeIn(4000);
+				$(".colorHider").hide();
+				$(".sliderToggle").hide();
 				break;
 			case 2:
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
 				currentIndex = nextIndex;
 				$('#camel_fixed').fadeOut(6000);
+				$(".colorHider").hide();
+				$(".sliderToggle").hide();
 				break;
 			case 3:
 				$("#hoverNavLine").animate({"width":"17em"}, 140);
 				currentIndex = nextIndex;
 				$('#camel_fixed').hide();
+				$(".colorHider").hide();
+				$(".sliderToggle").show('slow');
 				break;
 			case 4:
 				$("#hoverNavLine").animate({"width":"22em"}, 140);
 				currentIndex = nextIndex;
+				$(".colorHider").hide();
+				$(".sliderToggle").hide();
 				break;
 			default:
 				currentIndex = nextIndex;
 				$("#hoverNavLine").animate({"width":"0em"}, 140);
+				$(".colorHider").hide();
+				$(".sliderToggle").hide();
 			}
 		},
 
