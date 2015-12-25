@@ -449,11 +449,35 @@ img {
 
 /* SLIDER */
 .sliderToggle {
- width: 20em;
+ width: 15em;
  position: absolute;
- bottom: 10px;
- left: 25%;
- z-index: 8;
+ bottom: 20px;
+ left: 50%;
+ z-index: 4;
+ display: none;
+}
+
+.range-handle {
+	height: 20px;
+	width: 20px;
+	top: -11px;
+	background-color: #F0F0F0
+}
+
+.range-quantity {
+	background-color: #b7a080;
+}
+
+.range-min {
+	display: none;
+}
+
+.range-max {
+	display: none;
+}
+
+.range-bar {
+	height: 2.2px;
 }
 /* END SLIDER */
 
@@ -480,9 +504,18 @@ svg {
 .path {
 	stroke-dashoffset:1940;
 	stroke-dasharray:1940;
+	-webkit-animation: draw 100s linear;
+	-webkit-animation-play-state: initial;
+	-webkit-animation: draw 30s linear infinite;
 	animation: draw 100s linear;
-	animation-play-state: paused;
+	animation-play-state: initial;
 	animation: draw 30s linear infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 	fill-opacity: 0;
 	position:relative;
 }
@@ -495,5 +528,5 @@ svg {
 	34%{fill-opacity: 0;}
 	35%{fill-opacity: 1;}
 	50%{stroke-dashoffset:0;}
-	90%{stroke-dashoffset:0; fill-opacity: 1;}
+	100%{stroke-dashoffset:0; fill-opacity: 1;}
 }
