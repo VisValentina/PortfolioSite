@@ -16,14 +16,19 @@ $(document).ready(function() {
 			switch(nextIndex) {
 			case 1:
 				console.log("back to first page");
-				$("#camel_fixed").fadeIn(4000);
+				$("#camel_fixed").fadeIn(8000);
+				// $(".camel_drawing").fadeIn(15000);
+				// $(".handPiece").fadeIn(15000);
+
+
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
 				break;
 			case 2:
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
 				currentIndex = nextIndex;
-				$('#camel_fixed').fadeOut(6000);
+
+				$('#camel_fixed').fadeOut(4000);
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
 				break;
@@ -227,6 +232,10 @@ function onSliderChange() {
 // SVG
 setInterval(function() { 
 	$("#camel_drawing").fadeIn(15000);
+}, 2000);
+
+setInterval(function() { 
+	$("#handPiece").fadeIn(15000);
 }, 2000);
 // SVG
 });

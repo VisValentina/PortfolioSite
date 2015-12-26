@@ -57,6 +57,7 @@
 	bottom: 20%;
 	transform: translateY(20%);
 	text-align: center;
+	z-index: 1000000000;
 }
 
 .subHeader {
@@ -491,22 +492,40 @@ img {
 
 /* SVG */
 svg {
+	position: relative;
+	left:160px;
+	bottom:120px;
+	z-index: 2;
+	width: 540px;
+}
+
+#camel_fixed {
 	position: absolute;
-	left:0;
-	bottom:-65px;
-	right:0;
-	z-index: 0;
+	width: 752px;
+	height: 368px;
+	bottom: 0;
 }
 
 #camel_drawing {
 	position: absolute;
 	left:0;
 	bottom:60px;
-	height: 400px;
+	height: 368px;
 	display: none;
-	width: 733px;
+	width: 752px;
 	opacity: 1;
 	z-index: 1;
+}
+
+#handPiece {
+	position: absolute;
+	left:0;
+	bottom:60px;
+	width: 752px;
+	height: 368px;
+	display: none;
+	opacity: 1;
+	z-index: 5;	
 }
 
 .path {
