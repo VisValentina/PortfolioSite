@@ -60,6 +60,7 @@ $(document).ready(function() {
 			// console.log(nextSlideIndex * 72.5);
 			$('.range-handle').css('left', (nextSlideIndex * 72.5) + "px");
 			$('.range-quantity').css('width', (nextSlideIndex * 72.5) + "px");
+			$('.cameraContainer').hide();
 
 		}
 		//SLIDER
@@ -261,7 +262,10 @@ setInterval(function() {
 setInterval(function() { 
 	$("#handPiece").fadeIn(15000);
 }, 2000);
-// SVG
+
+setInterval(function() { 
+	$("#bird_drawing").fadeIn(10000);
+}, 2000);
 });
 
  //-- End
