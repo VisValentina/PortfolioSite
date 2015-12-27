@@ -628,3 +628,95 @@ img#bird_drawing {
 	100%{stroke-dashoffset:0; fill-opacity: 1;}
 }
 /* CAMERA SVG */
+
+/* LADDER SVG */
+svg.ladder_svg {
+	position: absolute;
+	right:0;
+	bottom:0px;
+	right:0;
+	z-index: -1;
+}
+
+.ladderContainer {
+	width: 240px;
+	height: 526px;
+	position: absolute;
+	right: 400px;
+	bottom: 3em;
+	z-index: 200;
+}
+
+img#ladder_drawing {
+	position: absolute;
+	right:-307px;
+	bottom:37px;
+	height: 100%;
+	display: none;
+	width: 234px;
+	opacity: 1;
+	z-index: 1;
+	min-width: 13em;
+}
+
+.ladder_path {
+	fill: none;
+	stroke: #646363;
+	stroke-width: 1.4;
+	stroke-miterlimit: 10;
+	stroke-dashoffset:1940;
+	stroke-dasharray:1940;
+	-webkit-animation: draw 100s linear;
+	-webkit-animation-play-state: initial; /* Setting to 'paused' did not work */
+	-webkit-animation: draw 30s linear infinite;
+	animation: draw 100s linear;
+	animation-play-state: initial; /* Setting to 'paused' did not work */
+	animation: draw 30s linear infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	fill-opacity: 0;
+	position:relative;
+	display: none;
+}
+
+.short {
+	fill: none;
+	stroke: #646363;
+	stroke-width: 1.4;
+	stroke-miterlimit: 10;
+	stroke-dashoffset:1940;
+	stroke-dasharray:1940;
+	-webkit-animation: draw 100s linear;
+	-webkit-animation-play-state: initial; /* Setting to 'paused' did not work */
+	-webkit-animation: draw 30s linear infinite;
+	animation: draw 100s linear;  /* Want to change the circles to draw later NOT WORKING YET */
+	animation-play-state: paused;
+	animation: draw 30s linear infinite;
+	/*animation-iteration-count: 1;*/
+	animation-delay: 6s;
+	-webkit-animation-direction: normal;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	fill-opacity: 0;
+	position:relative;
+	display: none;
+}
+
+@keyframes draw {
+	30%{fill-opacity: 0;}
+	31%{fill-opacity: 1;}
+	32%{fill-opacity: 0;}
+	33%{fill-opacity: 1;}
+	34%{fill-opacity: 0;}
+	35%{fill-opacity: 1;}
+	50%{stroke-dashoffset:0;}
+	100%{stroke-dashoffset:0; fill-opacity: 1;}
+}
+/* LADDER SVG */

@@ -22,6 +22,9 @@ $(document).ready(function() {
 				$(".sliderToggle").hide();
 				$('.camera_path').css('display', 'none');
 				$("#bird_drawing").css('display', 'none');
+				$('.ladder_path').css('display', 'none');
+				$("#ladder_drawing").css('display', 'none');
+				$('.short').css('display', 'none');
 				break;
 			case 2:
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
@@ -32,6 +35,12 @@ $(document).ready(function() {
 				$(".sliderToggle").hide();
 				$('.camera_path').css('display', 'none');
 				$("#bird_drawing").css('display', 'none');
+
+				$('.ladder_path').css('display', 'inline');
+				$('.short').css('display', 'inline');
+				setInterval(function() { 
+				$("#ladder_drawing").fadeIn(8000);
+				}, 5000);
 				break;
 			case 3:
 				$("#hoverNavLine").animate({"width":"17em"}, 140);
@@ -44,6 +53,10 @@ $(document).ready(function() {
 				setInterval(function() { 
 				$("#bird_drawing").fadeIn(8000);
 				}, 2000);
+
+				$('.ladder_path').css('display', 'none');
+				$("#ladder_drawing").css('display', 'none');
+				$('.short').css('display', 'none');
 				break;
 			case 4:
 				$("#hoverNavLine").animate({"width":"24em"}, 140);
@@ -52,6 +65,9 @@ $(document).ready(function() {
 				$(".sliderToggle").hide();
 				$('.camera_path').css('display', 'none');
 				$("#bird_drawing").css('display', 'none');
+				$('.ladder_path').css('display', 'none');
+				$("#ladder_drawing").css('display', 'none');
+				$('.short').css('display', 'none');
 				break;
 			default:
 				currentIndex = nextIndex;
@@ -60,6 +76,9 @@ $(document).ready(function() {
 				$(".sliderToggle").hide();
 				$('.camera_path').css('display', 'none');
 				$("#bird_drawing").css('display', 'none');
+				$('.ladder_path').css('display', 'none');
+				$("#ladder_drawing").css('display', 'none');
+				$('.short').css('display', 'none');
 			}
 		},
 
