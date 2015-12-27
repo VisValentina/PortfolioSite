@@ -601,10 +601,10 @@ img#bird_drawing {
 	stroke-dashoffset:1940;
 	stroke-dasharray:1940;
 	-webkit-animation: draw 100s linear;
-	-webkit-animation-play-state: initial;
+	-webkit-animation-play-state: initial; /* Setting to 'paused' did not work */
 	-webkit-animation: draw 30s linear infinite;
 	animation: draw 100s linear;
-	animation-play-state: initial;
+	animation-play-state: initial; /* Setting to 'paused' did not work */
 	animation: draw 30s linear infinite;
 	-webkit-animation-direction: normal;
 	-webkit-animation-iteration-count: 1;
@@ -624,6 +624,6 @@ img#bird_drawing {
 	34%{fill-opacity: 0;}
 	35%{fill-opacity: 1;}
 	50%{stroke-dashoffset:0;}
-	90%{stroke-dashoffset:0; fill-opacity: 1;}
+	100%{stroke-dashoffset:0; fill-opacity: 1;}
 }
 /* CAMERA SVG */

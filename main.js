@@ -25,7 +25,7 @@ $(document).ready(function() {
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
 				currentIndex = nextIndex;
 
-				$('#camel_fixed').fadeOut(4000);
+				$('#camel_fixed').hide();
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
 				break;
@@ -35,6 +35,7 @@ $(document).ready(function() {
 				$('#camel_fixed').hide();
 				$(".colorHider").hide();
 				$(".sliderToggle").show('slow');
+				$(".cameraContainer").show();
 				break;
 			case 4:
 				$("#hoverNavLine").animate({"width":"22em"}, 140);
@@ -52,12 +53,7 @@ $(document).ready(function() {
 
 		//SLIDER
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
-			// console.log("anchorLink", anchorLink);
-			// console.log("index", index);
-			// console.log("slideIndex", slideIndex);
-			// console.log("direction", direction);
-			// console.log("nextSlideIndex", nextSlideIndex);
-			// console.log(nextSlideIndex * 72.5);
+
 			$('.range-handle').css('left', (nextSlideIndex * 72.5) + "px");
 			$('.range-quantity').css('width', (nextSlideIndex * 72.5) + "px");
 			$('.cameraContainer').hide();
