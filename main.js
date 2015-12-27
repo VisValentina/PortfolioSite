@@ -20,6 +20,8 @@ $(document).ready(function() {
 
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
+				$('.camera_path').css('display', 'none');
+				$("#bird_drawing").css('display', 'none');
 				break;
 			case 2:
 				$("#hoverNavLine").animate({"width":"7em"}, 140);
@@ -28,6 +30,8 @@ $(document).ready(function() {
 				$('#camel_fixed').hide();
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
+				$('.camera_path').css('display', 'none');
+				$("#bird_drawing").css('display', 'none');
 				break;
 			case 3:
 				$("#hoverNavLine").animate({"width":"17em"}, 140);
@@ -35,19 +39,27 @@ $(document).ready(function() {
 				$('#camel_fixed').hide();
 				$(".colorHider").hide();
 				$(".sliderToggle").show('slow');
-				$(".cameraContainer").show();
+
+				$('.camera_path').css('display', 'inline');
+				setInterval(function() { 
+				$("#bird_drawing").fadeIn(8000);
+				}, 2000);
 				break;
 			case 4:
-				$("#hoverNavLine").animate({"width":"22em"}, 140);
+				$("#hoverNavLine").animate({"width":"24em"}, 140);
 				currentIndex = nextIndex;
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
+				$('.camera_path').css('display', 'none');
+				$("#bird_drawing").css('display', 'none');
 				break;
 			default:
 				currentIndex = nextIndex;
 				$("#hoverNavLine").animate({"width":"0em"}, 140);
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
+				$('.camera_path').css('display', 'none');
+				$("#bird_drawing").css('display', 'none');
 			}
 		},
 
@@ -56,7 +68,13 @@ $(document).ready(function() {
 
 			$('.range-handle').css('left', (nextSlideIndex * 72.5) + "px");
 			$('.range-quantity').css('width', (nextSlideIndex * 72.5) + "px");
-			$('.cameraContainer').hide();
+			
+			
+			if(slideIndex >= 0) { // TARGET THIS USING THE URL - THERE ARE 2 SLIDE 1's ?!
+				$('.cameraContainer').hide();
+			} else {
+				$('.cameraContainer').show();
+			};
 
 		}
 		//SLIDER
@@ -69,7 +87,7 @@ $(document).ready(function() {
 		case 3:
 			return "17em";	
 		case 4:
-			return "22em";	
+			return "24em";	
 		default:
 			return "0em";
 		}
@@ -97,7 +115,7 @@ $(document).ready(function() {
 	});
 	$('#QuiNav').mouseover(function(e) {
 		e.stopPropagation();
-		$("#hoverNavLine").animate({"width":"22em"}, 140);
+		$("#hoverNavLine").animate({"width":"24em"}, 140);
 	});
 
 	$('#QuiNav').mouseout(function(e) {
@@ -259,9 +277,6 @@ setInterval(function() {
 	$("#handPiece").fadeIn(15000);
 }, 2000);
 
-setInterval(function() { 
-	$("#bird_drawing").fadeIn(10000);
-}, 2000);
 });
 
  //-- End

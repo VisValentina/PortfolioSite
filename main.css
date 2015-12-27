@@ -614,6 +614,7 @@ img#bird_drawing {
 	animation-fill-mode: forwards;
 	fill-opacity: 0;
 	position:relative;
+	display: none;
 }
 
 @keyframes draw {
