@@ -6,7 +6,7 @@ $(document).ready(function() {
 		menu: '#myMenu',
 		showActiveTooltip: true,
 		// slidesNavigation: true,
-		fixedElements: '#camel_fixed, .colorHider, .sliderToggle',
+		fixedElements: '.colorHider, .sliderToggle',
 
 
 		onLeave: function(index, nextIndex, direction) {
@@ -15,8 +15,13 @@ $(document).ready(function() {
 			// console.log("nextIndex", nextIndex);
 			switch(nextIndex) {
 			case 1:
-				console.log("back to first page");
-				$("#camel_fixed").fadeIn(8000);
+				setInterval(function() { 
+				$("#camel_drawing").fadeIn(15000);
+				}, 2000);
+				setInterval(function() { 
+				$("#handPiece").fadeIn(15000);
+				}, 2000);
+				$('.camel_path').css('display', 'inline');
 
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
@@ -39,6 +44,9 @@ $(document).ready(function() {
 				$("#bird_drawing").css('display', 'none');
 				$('.kite_path').css('display', 'none');
 				$("#kite_drawing").css('display', 'none');
+				$('.camel_path').css('display', 'none');
+				$("#camel_drawing").css('display', 'none');
+				$("#handPiece").css('display', 'none');
 
 				$('.ladder_path').css('display', 'inline');
 				$('.short').css('display', 'inline');
@@ -64,6 +72,9 @@ $(document).ready(function() {
 
 				$('.kite_path').css('display', 'none');
 				$("#kite_drawing").css('display', 'none');
+				$('.camel_path').css('display', 'none');
+				$("#camel_drawing").css('display', 'none');
+				$("#handPiece").css('display', 'none');
 				break;
 			case 4:
 				$("#hoverNavLine").animate({"width":"24em"}, 140);
@@ -75,6 +86,9 @@ $(document).ready(function() {
 				$('.ladder_path').css('display', 'none');
 				$("#ladder_drawing").css('display', 'none');
 				$('.short').css('display', 'none');
+				$('.camel_path').css('display', 'none');
+				$("#camel_drawing").css('display', 'none');
+				$("#handPiece").css('display', 'none');
 
 				$('.kite_path').css('display', 'inline');
 				setInterval(function() { 
@@ -93,6 +107,9 @@ $(document).ready(function() {
 				$('.short').css('display', 'none');
 				$('.kite_path').css('display', 'none');
 				$("#kite_drawing").css('display', 'none');
+				$('.camel_path').css('display', 'none');
+				$("#camel_drawing").css('display', 'none');
+				$("#handPiece").css('display', 'none');
 			}
 		},
 
@@ -302,13 +319,13 @@ function onSliderChange() {
 	}
 };
 // SVG
-setInterval(function() { 
-	$("#camel_drawing").fadeIn(15000);
-}, 2000);
+// setInterval(function() { 
+// 	$("#camel_drawing").fadeIn(15000);
+// }, 2000);
 
-setInterval(function() { 
-	$("#handPiece").fadeIn(15000);
-}, 2000);
+// setInterval(function() { 
+// 	$("#handPiece").fadeIn(15000);
+// }, 2000);
 
 });
 
