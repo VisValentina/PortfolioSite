@@ -8,13 +8,8 @@ $(document).ready(function() {
 		// slidesNavigation: true,
 		fixedElements: '.colorHider, .sliderToggle',
 
-
-		onLeave: function(index, nextIndex, direction) {
-			var leavingSection = $(this);
-			// console.log("index", index);
-			// console.log("nextIndex", nextIndex);
-			switch(nextIndex) {
-			case 1:
+		afterLoad: function(anchorLink, index){
+			if(index === 1) {
 				setInterval(function() { 
 				$("#camel_drawing").fadeIn(15000);
 				}, 2000);
@@ -22,6 +17,22 @@ $(document).ready(function() {
 				$("#handPiece").fadeIn(15000);
 				}, 2000);
 				$('.camel_path').css('display', 'inline');
+			}
+		},
+
+		onLeave: function(index, nextIndex, direction) {
+			var leavingSection = $(this);
+			// console.log("index", index);
+			// console.log("nextIndex", nextIndex);
+			switch(nextIndex) {
+			case 1:
+				// setInterval(function() { 
+				// $("#camel_drawing").fadeIn(15000);
+				// }, 2000);
+				// setInterval(function() { 
+				// $("#handPiece").fadeIn(15000);
+				// }, 2000);
+				// $('.camel_path').css('display', 'inline');
 
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
