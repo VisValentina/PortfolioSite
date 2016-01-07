@@ -127,8 +127,8 @@ $(document).ready(function() {
 		//SLIDER
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 
-			$('.range-handle').css('left', (nextSlideIndex * 72.5) + "px");
-			$('.range-quantity').css('width', (nextSlideIndex * 72.5) + "px");
+			$('.range-handle').css('left', (nextSlideIndex * 30) + "px");
+			$('.range-quantity').css('width', (nextSlideIndex * 30) + "px");
 			
 			
 			if(slideIndex >= 0) { // TARGET THIS USING THE URL - THERE ARE 2 SLIDE 1's ?!
