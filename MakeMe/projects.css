@@ -262,4 +262,33 @@ top: -44px;
 }
 /* END MENU ICON NAVIGATION */
 
+.bulletPointsText a {
+	text-decoration: none;
+	color: #b7a080;
+	font-family: "freight-text-pro";
+	display: inline;
+	font-weight: 100;
+	letter-spacing: .1em;
+	font-size: 1em;
+}
 
+.nextProject {
+	position: absolute;
+	bottom: 7em;
+	text-align: center;
+	width: 26em;
+	max-width: 726px;
+/*	background-color: green;*/
+}
+
+.headerNextProject a{
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .18em;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 600;
+	font-family: "freight-sans-pro";
+	font-size: 1.5em;
+	margin-top: .3em;
+	margin-bottom: 0;
+}

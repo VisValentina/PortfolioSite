@@ -5,6 +5,14 @@ $(document).ready(function() {
 		sectionsColor: ['#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
 		menu: '#myMenu',
 		showActiveTooltip: true,
+		fixedElements: '.projectSidebar',
+
+		afterResize: function(){
+			var contentWidth = $('.projectContentDescription').width();
+			// if(anchorLink === "finalImage") {
+				$('.nextProject').css('width', contentWidth);
+			// }
+		},
 	});
 
 
