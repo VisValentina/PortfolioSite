@@ -17,6 +17,10 @@ $(document).ready(function() {
 
 
 	$('#FWName').mouseover(function(){
+		// remove default with MakeMe selected
+		$('#brandingSelected').css('color', '#f0f0f0');
+		$('#uiuxSelected').css('color', '#f0f0f0');
+		$('#reactNativeSelected').css('color', '#f0f0f0');
 		
 		$('#javascriptSelected').css('color', '#a8a8a8');
 		$('#artdirectionSelected').css('color', '#a8a8a8');
@@ -28,9 +32,17 @@ $(document).ready(function() {
 		$('#javascriptSelected').css('color', '#f0f0f0');
 		$('#artdirectionSelected').css('color', '#f0f0f0');
 		$('#css3Selected').css('color', '#f0f0f0');
+		// back to default with MakeMe selected
+		$('#brandingSelected').css('color', '#a8a8a8');
+		$('#uiuxSelected').css('color', '#a8a8a8');
+		$('#reactNativeSelected').css('color', '#a8a8a8');
 	});
 
 	$('#MMName').mouseover(function(){
+		// remove default with MakeMe selected
+		$('#brandingSelected').css('color', '#f0f0f0');
+		$('#uiuxSelected').css('color', '#f0f0f0');
+		$('#reactNativeSelected').css('color', '#f0f0f0');
 		
 		$('#uiuxSelected').css('color', '#a8a8a8');
 		$('#reactNativeSelected').css('color', '#a8a8a8');
@@ -44,9 +56,17 @@ $(document).ready(function() {
 		$('#reactNativeSelected').css('color', '#f0f0f0');
 		$('#brandingSelected').css('color', '#f0f0f0');
 		$('#javscriptSelected').css('color', '#f0f0f0');
+		// back to default with MakeMe selected
+		$('#brandingSelected').css('color', '#a8a8a8');
+		$('#uiuxSelected').css('color', '#a8a8a8');
+		$('#reactNativeSelected').css('color', '#a8a8a8');
 	});
 
 	$('#ZName').mouseover(function(){
+		// remove default with MakeMe selected
+		$('#brandingSelected').css('color', '#f0f0f0');
+		$('#uiuxSelected').css('color', '#f0f0f0');
+		$('#reactNativeSelected').css('color', '#f0f0f0');
 		
 		$('#brandingSelected').css('color', '#a8a8a8');
 		$('#artdirectionSelected').css('color', '#a8a8a8');
@@ -56,9 +76,17 @@ $(document).ready(function() {
 		
 		$('#brandingSelected').css('color', '#f0f0f0');
 		$('#artdirectionSelected').css('color', '#f0f0f0');
+		// back to default with MakeMe selected
+		$('#brandingSelected').css('color', '#a8a8a8');
+		$('#uiuxSelected').css('color', '#a8a8a8');
+		$('#reactNativeSelected').css('color', '#a8a8a8');
 	});
 
 	$('#FSName').mouseover(function(){
+		// remove default with MakeMe selected
+		$('#brandingSelected').css('color', '#f0f0f0');
+		$('#uiuxSelected').css('color', '#f0f0f0');
+		$('#reactNativeSelected').css('color', '#f0f0f0');
 		
 		$('#javascriptSelected').css('color', '#a8a8a8');
 		$('#css3Selected').css('color', '#a8a8a8');
@@ -70,9 +98,17 @@ $(document).ready(function() {
 		$('#javascriptSelected').css('color', '#f0f0f0');
 		$('#css3Selected').css('color', '#f0f0f0');
 		$('#artdirectionSelected').css('color', '#f0f0f0');
+		// back to default with MakeMe selected
+		$('#brandingSelected').css('color', '#a8a8a8');
+		$('#uiuxSelected').css('color', '#a8a8a8');
+		$('#reactNativeSelected').css('color', '#a8a8a8');
 	});
 
 	$('#RName').mouseover(function(){
+		// remove default with MakeMe selected
+		$('#brandingSelected').css('color', '#f0f0f0');
+		$('#uiuxSelected').css('color', '#f0f0f0');
+		$('#reactNativeSelected').css('color', '#f0f0f0');
 		
 		$('#d3Selected').css('color', '#a8a8a8');
 		$('#reactSelected').css('color', '#a8a8a8');
@@ -86,6 +122,10 @@ $(document).ready(function() {
 		$('#reactSelected').css('color', '#f0f0f0');
 		$('#brandingSelected').css('color', '#f0f0f0');
 		$('#javscriptSelected').css('color', '#f0f0f0');
+		// back to default with MakeMe selected
+		$('#brandingSelected').css('color', '#a8a8a8');
+		$('#uiuxSelected').css('color', '#a8a8a8');
+		$('#reactNativeSelected').css('color', '#a8a8a8');
 	});
 
 	// Click on tag will filter the project titles pertaining to it
