@@ -7,6 +7,15 @@ $(document).ready(function() {
 		showActiveTooltip: true,
 		fixedElements: '.projectSidebar',
 
+		afterLoad: function(anchorLink, index){
+			if(anchorLink === 'finalImage') {
+				$('.tightrope_path').css('display', 'inline');
+				setInterval(function() { 
+				$("#tightrope_drawing").fadeIn(18000);
+				}, 6000);
+			}
+		},
+
 		afterResize: function(){
 			var contentWidth = $('.projectContentDescription').width();
 			// if(anchorLink === "finalImage") {
