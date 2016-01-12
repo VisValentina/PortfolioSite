@@ -14,6 +14,9 @@ $(document).ready(function() {
 				$("#tightrope_drawing").fadeIn(18000);
 				}, 6000);
 			}
+
+			var contentWidth = $('.projectContentDescription').width();
+			$('.nextProject').css('width', contentWidth);
 		},
 
 		afterResize: function(){
@@ -171,6 +174,11 @@ $(document).ready(function() {
 	$('#playgroundNavWorks').mouseover(function(e) {
 		e.stopPropagation();
 		$("#hoverNavLineWorks").animate({"width":"17em"}, 140);
+	});
+
+	$('#quiNavWorks').mouseover(function(e) {
+		e.stopPropagation();
+		$("#hoverNavLineWorks").animate({"width":"24em"}, 140);
 	});
 
 	$('#playgroundNavWorks').mouseout(function(e) {

@@ -26,6 +26,8 @@ $(document).ready(function() {
 			// console.log("nextIndex", nextIndex);
 			switch(nextIndex) {
 			case 1:
+				$("#hoverNavLine").animate({"width":"0em"}, 140);
+				currentIndex = nextIndex;
 				// setInterval(function() { 
 				// $("#camel_drawing").fadeIn(15000);
 				// }, 2000);
@@ -66,7 +68,9 @@ $(document).ready(function() {
 				}, 5000);
 				break;
 			case 3:
-				$("#hoverNavLine").animate({"width":"17em"}, 140);
+		var windowWidth = $(window).width();
+		var navLength = windowWidth > 1160 ? ((windowWidth / 1450) * 17) + "em" : "17em";	
+				$("#hoverNavLine").animate({"width":navLength}, 140);
 				currentIndex = nextIndex;
 				$('#camel_fixed').hide();
 				$(".colorHider").hide();
@@ -88,7 +92,7 @@ $(document).ready(function() {
 				$("#handPiece").css('display', 'none');
 				break;
 			case 4:
-				$("#hoverNavLine").animate({"width":"24em"}, 140);
+				$("#hoverNavLine").animate({"width":"22em"}, 140);
 				currentIndex = nextIndex;
 				$(".colorHider").hide();
 				$(".sliderToggle").hide();
@@ -141,14 +145,16 @@ $(document).ready(function() {
 		//SLIDER
 	});
 	
+	// This is for hover
 	function getLength(pageIndex) {
+		var windowWidth = $(window).width();
 		switch(pageIndex) {
 		case 2:
 			return "7em";
 		case 3:
-			return "17em";	
+			return windowWidth > 1160 ? ((windowWidth / 1450) * 17) + "em" : "17em";	
 		case 4:
-			return "24em";	
+			return windowWidth > 1160 ? ((windowWidth / 1300) * 22) + "em" : "22em";	
 		default:
 			return "0em";
 		}
@@ -156,6 +162,8 @@ $(document).ready(function() {
 
 	$('#WorksNav').mouseover(function(e) {
 		e.stopPropagation();
+		// var windowWidth = $(window).width();
+		// var navLength = windowWidth > 1160 ? ((windowWidth / 1160) * 7) + "em" : "7em";	
 		$("#hoverNavLine").animate({"width":"7em"}, 140);
 	});
 	$('#WorksNav').mouseout(function(e) {
@@ -176,7 +184,7 @@ $(document).ready(function() {
 	});
 	$('#QuiNav').mouseover(function(e) {
 		e.stopPropagation();
-		$("#hoverNavLine").animate({"width":"24em"}, 140);
+		$("#hoverNavLine").animate({"width":"22em"}, 140);
 	});
 
 	$('#QuiNav').mouseout(function(e) {
