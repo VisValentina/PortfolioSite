@@ -134,15 +134,28 @@ $(document).ready(function() {
 			$('.range-handle').css('left', (nextSlideIndex * 30) + "px");
 			$('.range-quantity').css('width', (nextSlideIndex * 30) + "px");
 			
-			
-			if(slideIndex >= 0) { // TARGET THIS USING THE URL - THERE ARE 2 SLIDE 1's ?!
+			// console.log(window.location.hash);
+			// console.log("Index is: " + index);
+			// console.log("anchorLink is: " + anchorLink);
+			console.log(nextSlideIndex);
+
+			if(nextSlideIndex !== 0) { // TARGET THIS USING THE URL - THERE ARE 2 SLIDE 1's ?!
 				$('.cameraContainer').hide();
 			} else {
 				$('.cameraContainer').show();
 			};
 
-		}
+		},
 		//SLIDER
+
+		// afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+		// 	console.log(slideIndex);
+		// 	if(slideIndex !== 0) {
+		// 		$('.cameraContainer').hide();
+		// 	} else {
+		// 		$('.cameraContainer').show();
+		// 	};
+		// },
 	});
 	
 	// This is for hover
